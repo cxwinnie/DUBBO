@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.xuxianda</groupId>
+  <artifactId>scm-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>scm-parent</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <modules>
+  	<module>../scm-entity</module>
+  	<module>../scm-dao</module>
+  	<module>../scm-service</module>
+  	<module>../scm-action</module>
+  </modules>
+  
+  <distributionManagement>
+  	<repository>
+  		<id>releases</id>
+  		<name>Internal Releases</name>
+  		<url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>snapshots</id>
+  		<name>Internal Snapshots</name>
+  		<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+  	</snapshotRepository>
+  </distributionManagement>
+  
+</project>
