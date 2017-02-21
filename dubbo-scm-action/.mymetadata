@@ -4,7 +4,7 @@
   name="dubbo-scm-action"
   id="myeclipse.1478952873899"
   context-root="/dubbo-scm-action"
-  j2ee-spec="1.7"
+  j2ee-spec="6.0"
   archive="dubbo-scm-action.war">
   <attributes>
     <attribute name="webrootdir" value="src/main/webapp" />
