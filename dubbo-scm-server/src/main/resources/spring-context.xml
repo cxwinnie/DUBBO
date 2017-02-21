@@ -15,7 +15,8 @@
 	<bean id="propertiesBean" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:config.properties</value>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:dubbo.properties</value>
 			</list>
 		</property>
 	</bean>
