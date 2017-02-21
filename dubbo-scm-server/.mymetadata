@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="dubbo-scm-server"
+  id="myeclipse.1487554313210"
+  context-root="/dubbo-scm-server"
+  j2ee-spec="6.0"
+  archive="dubbo-scm-server.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
