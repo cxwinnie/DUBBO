@@ -1,9 +1,12 @@
 package cn.xuxianda.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class BuyOrderDetail {
-    private String bodId;
+public class BuyOrderDetail implements Serializable{
+	private static final long serialVersionUID = -3229649584468767171L;
+
+	private String bodId;
 
     private String goodsId;
 

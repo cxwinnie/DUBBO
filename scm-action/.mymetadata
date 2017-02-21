@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="scm-action"
+  name="dubbo-scm-action"
   id="myeclipse.1478952873899"
-  context-root="/scm-action"
+  context-root="/dubbo-scm-action"
   j2ee-spec="1.7"
-  archive="scm-action.war">
+  archive="dubbo-scm-action.war">
   <attributes>
     <attribute name="webrootdir" value="src/main/webapp" />
   </attributes>

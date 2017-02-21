@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="scm-action">
+    <wb-module deploy-name="dubbo-scm-action">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <dependent-module archiveName="scm-service-0.0.4-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/scm-service/scm-service">
+        <dependent-module archiveName="dubbo-scm-dao-0.0.3-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dubbo-scm-dao/dubbo-scm-dao">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="scm-dao-0.0.3-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/scm-dao/scm-dao">
+        <dependent-module archiveName="dubbo-scm-entity-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dubbo-scm-entity/dubbo-scm-entity">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="scm-entity-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/scm-entity/scm-entity">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <property name="context-root" value="/scm-action"/>
-        <property name="java-output-path" value="/scm-action/src/main/webapp/WEB-INF/classes"/>
+        <property name="java-output-path" value="/dubbo-scm-action/src/main/webapp/WEB-INF/classes"/>
+        <property name="context-root" value="/dubbo-scm-action"/>
     </wb-module>
 </project-modules>

@@ -2,16 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.xuxianda.action</groupId>
-	<artifactId>scm-action</artifactId>
+	<artifactId>dubbo-scm-action</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.5-SNAPSHOT</version>
-	<name>scm-action</name>
+	<name>dubbo-scm-action</name>
 
 	<parent>
 		<groupId>cn.xuxianda</groupId>
-		<artifactId>scm-parent</artifactId>
+		<artifactId>dubbo-scm-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../scm-parent</relativePath>
+		<relativePath>../dubbo-scm-parent</relativePath>
 	</parent>
 
 	<dependencies>
@@ -28,9 +28,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>cn.xuxianda.service</groupId>
-			<artifactId>scm-service</artifactId>
-			<version>0.0.4-SNAPSHOT</version>
+			<groupId>cn.xuxianda.dao</groupId>
+			<artifactId>dubbo-scm-dao</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
@@ -129,7 +129,6 @@
 			<artifactId>quartz-jobs</artifactId>
 			<version>2.2.3</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -220,6 +219,43 @@
 			<artifactId>druid</artifactId>
 			<version>1.0.28</version>
 		</dependency>
+		<!-- dubbo 需要的jar start -->
+		<dependency>
+			<groupId>org.jboss.netty</groupId>
+			<artifactId>netty</artifactId>
+			<version>3.2.5.Final</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.3</version>
+		</dependency>
+		<!-- dubbo 需要的jar end -->
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>scm-action</finalName>

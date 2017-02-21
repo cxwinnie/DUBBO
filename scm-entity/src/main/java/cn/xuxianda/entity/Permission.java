@@ -1,7 +1,11 @@
 package cn.xuxianda.entity;
 
-public class Permission {
-    private Long id;
+import java.io.Serializable;
+
+public class Permission implements Serializable{
+	private static final long serialVersionUID = -3051992668579725918L;
+
+	private Long id;
 
     private String name;
 

@@ -1,13 +1,17 @@
 package cn.xuxianda.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class BuyOrder {
-    private String boId;
+public class BuyOrder implements Serializable{
+
+	private static final long serialVersionUID = -7967574652302985574L;
+
+	private String boId;
 
     private Integer supId;
 

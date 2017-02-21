@@ -3,17 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cn.xuxianda.dao</groupId>
-  <artifactId>scm-dao</artifactId>
+  <artifactId>dubbo-scm-dao</artifactId>
   <version>0.0.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>scm-dao</name>
+  <name>dubbo-scm-dao</name>
 
   <parent>
   	<groupId>cn.xuxianda</groupId>
-  	<artifactId>scm-parent</artifactId>
+  	<artifactId>dubbo-scm-parent</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
-  	<relativePath>../scm-parent</relativePath>
+  	<relativePath>../dubbo-scm-parent</relativePath>
   </parent>
 
   <properties>
@@ -24,7 +24,7 @@
   	
   	<dependency>
 	  <groupId>cn.xuxianda.entity</groupId>
-	  <artifactId>scm-entity</artifactId>
+	  <artifactId>dubbo-scm-entity</artifactId>
 	  <version>0.0.2-SNAPSHOT</version>
 	</dependency>
   

@@ -1,7 +1,14 @@
 package cn.xuxianda.entity;
 
-public class DataElementNlv {
-    private Integer dataElementNlvId;
+import java.io.Serializable;
+
+public class DataElementNlv implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8128945594492450721L;
+
+	private Integer dataElementNlvId;
 
     private Long dataElementId;
 

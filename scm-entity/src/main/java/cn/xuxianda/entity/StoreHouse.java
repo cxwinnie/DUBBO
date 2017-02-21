@@ -1,7 +1,14 @@
 package cn.xuxianda.entity;
 
-public class StoreHouse {
-    private String shId;
+import java.io.Serializable;
+
+public class StoreHouse implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6067543699119504294L;
+
+	private String shId;
 
     private String shName;
 
