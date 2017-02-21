@@ -26,7 +26,11 @@
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>cn.xuxianda.config</groupId>
+			<artifactId>dubbo-scm-config</artifactId>
+			<version>0.0.6-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>cn.xuxianda.dao</groupId>
 			<artifactId>dubbo-scm-dao</artifactId>

@@ -26,6 +26,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>cn.xuxianda.config</groupId>
+			<artifactId>dubbo-scm-config</artifactId>
+			<version>0.0.6-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 		  <groupId>cn.xuxianda.entity</groupId>
 		  <artifactId>dubbo-scm-entity</artifactId>
 		  <version>0.0.2-SNAPSHOT</version>
