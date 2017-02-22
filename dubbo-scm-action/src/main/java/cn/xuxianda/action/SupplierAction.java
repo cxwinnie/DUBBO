@@ -54,7 +54,7 @@ public class SupplierAction{
 		return map;
 	}*/
 	
-	@RequiresPermissions("")
+	@RequiresPermissions("asdf")
 	@RequestMapping("/selectPageUseDyc")
 	@ResponseBody
 	public Object selectPageUseDyc(Page<Supplier> page,Supplier supplier){//直接把页面中关于分页的参数传入page中（如属性page和rows），把需要查询的条件传入supplier
