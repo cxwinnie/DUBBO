@@ -19,6 +19,7 @@
   	<module>../dubbo-scm-dao</module>
   	<module>../dubbo-scm-action</module>
   	<module>../dubbo-scm-server</module>
+  	<module>../dubbo-scm-config</module>
   </modules>
   
   <distributionManagement>

@@ -1,0 +1,84 @@
+[INFO ][20170224 15:08:43,992][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:08:43 CST 2017]; root of context hierarchy
+[INFO ][20170224 15:08:44,035][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170224 15:08:44,271][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170224 15:08:44,383][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[ERROR][20170224 15:09:05,730][MQProducerTest:29] ==>MQ context start error:
+org.springframework.jms.UncategorizedJmsException: Uncategorized exception occured during JMS processing; nested exception is javax.jms.JMSException: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.43.9:61616. Reason: java.net.ConnectException: Connection timed out: connect
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:316)
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:169)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:497)
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:580)
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:563)
+	at cn.xuxianda.mq.MQProducer.sendMessage(MQProducer.java:27)
+	at cn.xuxianda.mqtest.MQProducerTest.main(MQProducerTest.java:25)
+Caused by: javax.jms.JMSException: Error while attempting to add new Connection to the pool
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createJmsException(PooledConnectionFactory.java:267)
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:226)
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:205)
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:365)
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:305)
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:283)
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:224)
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:180)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:484)
+	... 4 more
+Caused by: javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.43.9:61616. Reason: java.net.ConnectException: Connection timed out: connect
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:36)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:360)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:305)
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245)
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:276)
+	at org.apache.activemq.jms.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:108)
+	at org.apache.activemq.jms.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:88)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.addObject(GenericKeyedObjectPool.java:1748)
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:222)
+	... 11 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:501)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:464)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:138)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:340)
+	... 18 more
+[INFO ][20170224 15:11:06,841][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@674df816: startup date [Fri Feb 24 15:11:06 CST 2017]; root of context hierarchy
+[INFO ][20170224 15:11:06,884][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170224 15:11:07,075][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170224 15:11:07,192][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170224 15:11:07,525][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-52061-1487920267411-1:1,clientId=null,started=false}] }
+[INFO ][20170224 15:11:08,666][MQProducerTest:32] ===>System.exit
+[INFO ][20170224 15:31:14,074][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:31:14 CST 2017]; root of context hierarchy
+[INFO ][20170224 15:31:14,122][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170224 15:31:14,319][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170224 15:31:14,442][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170224 15:31:14,783][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-63203-1487921474668-1:1,clientId=null,started=false}] }
+[INFO ][20170224 15:31:14,911][MQProducerTest:32] ===>System.exit
+[INFO ][20170224 15:54:35,433][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Fri Feb 24 15:54:35 CST 2017]; root of context hierarchy
+[INFO ][20170224 15:54:35,472][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170224 15:54:35,702][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170224 15:54:35,835][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170224 15:54:36,187][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51166-1487922876074-1:1,clientId=null,started=false}] }
+[INFO ][20170224 15:54:36,317][MQProducerTest:32] ===>System.exit
+[INFO ][20170224 15:55:27,714][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:55:27 CST 2017]; root of context hierarchy
+[INFO ][20170224 15:55:27,757][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170224 15:55:27,972][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170224 15:55:28,089][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170224 15:55:28,418][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-65261-1487922928304-1:1,clientId=null,started=false}] }
+[INFO ][20170224 15:55:28,582][MQProducerTest:32] ===>System.exit
+[INFO ][20170224 15:56:31,227][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:56:31 CST 2017]; root of context hierarchy
+[INFO ][20170224 15:56:31,266][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170224 15:56:31,462][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170224 15:56:31,587][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170224 15:56:31,919][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-49155-1487922991806-1:1,clientId=null,started=false}] }
+[INFO ][20170224 15:56:32,048][MQProducerTest:32] ===>System.exit

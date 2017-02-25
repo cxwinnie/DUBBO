@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="activemq-producer"
+  id="myeclipse.1487916819314"
+  context-root="/activemq-producer"
+  j2ee-spec="6.0"
+  archive="activemq-producer.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
