@@ -18,7 +18,7 @@ public class MQProducerTest {
 			MQProducer mqProducer = (MQProducer) context.getBean("mqProducer");
 			// 邮件发送
 			MailParam mail = new MailParam();
-			mail.setTo("1114186632@qq.com");
+			mail.setTo("1315236483@qq.com");
 			mail.setSubject("ActiveMQ测试");
 			mail.setContent("通过ActiveMQ异步发送邮件！");
 

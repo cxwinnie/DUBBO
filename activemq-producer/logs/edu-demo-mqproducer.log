@@ -1,8 +1,20 @@
-[INFO ][20170224 15:08:43,992][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:08:43 CST 2017]; root of context hierarchy
-[INFO ][20170224 15:08:44,035][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20170224 15:08:44,271][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
-[INFO ][20170224 15:08:44,383][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
-[ERROR][20170224 15:09:05,730][MQProducerTest:29] ==>MQ context start error:
+[INFO ][20170225 15:54:47,667][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 15:54:47 CST 2017]; root of context hierarchy
+[INFO ][20170225 15:54:47,710][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 15:54:47,948][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 15:54:48,061][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[ERROR][20170225 15:54:48,214][MQProducerTest:29] ==>MQ context start error:
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mqProducer' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1174)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:283)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1045)
+	at cn.xuxianda.mqtest.MQProducerTest.main(MQProducerTest.java:18)
+[INFO ][20170225 15:57:55,649][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a9292cb: startup date [Sat Feb 25 15:57:55 CST 2017]; root of context hierarchy
+[INFO ][20170225 15:57:55,692][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 15:57:55,883][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 15:57:55,993][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[ERROR][20170225 15:58:17,340][MQProducerTest:29] ==>MQ context start error:
 org.springframework.jms.UncategorizedJmsException: Uncategorized exception occured during JMS processing; nested exception is javax.jms.JMSException: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.43.9:61616. Reason: java.net.ConnectException: Connection timed out: connect
 	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:316)
 	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:169)
@@ -52,33 +64,243 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
 	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:340)
 	... 18 more
-[INFO ][20170224 15:11:06,841][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@674df816: startup date [Fri Feb 24 15:11:06 CST 2017]; root of context hierarchy
-[INFO ][20170224 15:11:06,884][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20170224 15:11:07,075][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
-[INFO ][20170224 15:11:07,192][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
-[INFO ][20170224 15:11:07,525][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-52061-1487920267411-1:1,clientId=null,started=false}] }
-[INFO ][20170224 15:11:08,666][MQProducerTest:32] ===>System.exit
-[INFO ][20170224 15:31:14,074][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:31:14 CST 2017]; root of context hierarchy
-[INFO ][20170224 15:31:14,122][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20170224 15:31:14,319][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
-[INFO ][20170224 15:31:14,442][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
-[INFO ][20170224 15:31:14,783][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-63203-1487921474668-1:1,clientId=null,started=false}] }
-[INFO ][20170224 15:31:14,911][MQProducerTest:32] ===>System.exit
-[INFO ][20170224 15:54:35,433][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Fri Feb 24 15:54:35 CST 2017]; root of context hierarchy
-[INFO ][20170224 15:54:35,472][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20170224 15:54:35,702][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
-[INFO ][20170224 15:54:35,835][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
-[INFO ][20170224 15:54:36,187][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51166-1487922876074-1:1,clientId=null,started=false}] }
-[INFO ][20170224 15:54:36,317][MQProducerTest:32] ===>System.exit
-[INFO ][20170224 15:55:27,714][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:55:27 CST 2017]; root of context hierarchy
-[INFO ][20170224 15:55:27,757][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20170224 15:55:27,972][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
-[INFO ][20170224 15:55:28,089][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
-[INFO ][20170224 15:55:28,418][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-65261-1487922928304-1:1,clientId=null,started=false}] }
-[INFO ][20170224 15:55:28,582][MQProducerTest:32] ===>System.exit
-[INFO ][20170224 15:56:31,227][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Fri Feb 24 15:56:31 CST 2017]; root of context hierarchy
-[INFO ][20170224 15:56:31,266][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20170224 15:56:31,462][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
-[INFO ][20170224 15:56:31,587][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
-[INFO ][20170224 15:56:31,919][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-49155-1487922991806-1:1,clientId=null,started=false}] }
-[INFO ][20170224 15:56:32,048][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 15:59:11,817][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 15:59:11 CST 2017]; root of context hierarchy
+[INFO ][20170225 15:59:11,864][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 15:59:12,067][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 15:59:12,180][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 15:59:12,505][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-59758-1488009552392-1:1,clientId=null,started=false}] }
+[INFO ][20170225 15:59:12,931][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:06:01,465][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:06:01 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:06:01,504][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:06:01,708][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:06:01,817][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:06:02,157][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60005-1488009962044-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:06:02,282][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:06:27,298][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 16:06:27 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:06:27,338][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:06:27,533][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:06:27,646][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:06:27,975][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60007-1488009987860-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:06:28,098][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:12:45,809][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:12:45 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:12:45,852][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:12:46,055][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:12:46,165][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:12:46,505][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60511-1488010366392-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:12:46,627][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:13:00,426][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 16:13:00 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:13:00,465][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:13:00,657][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:13:00,770][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:13:01,091][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60514-1488010380978-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:13:01,219][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:13:26,698][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:13:26 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:13:26,738][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:13:26,955][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:13:27,069][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:13:27,392][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60523-1488010407282-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:13:27,517][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:13:34,008][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:13:34 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:13:34,047][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:13:34,277][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:13:34,406][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:13:34,731][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60526-1488010414618-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:13:34,872][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:21:02,127][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 16:21:02 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:21:02,166][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:21:02,377][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:21:02,491][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:21:02,845][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50323-1488010862720-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:21:02,986][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:21:28,228][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a9292cb: startup date [Sat Feb 25 16:21:28 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:21:28,274][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:21:28,486][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:21:28,602][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:21:28,952][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50333-1488010888838-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:21:29,075][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:27:09,395][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:27:09 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:27:09,434][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:27:09,633][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:27:09,751][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:27:10,075][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50548-1488011229962-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:27:10,192][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:28:22,219][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 16:28:22 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:28:22,258][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:28:22,470][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:28:22,599][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:28:22,943][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50579-1488011302829-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:28:23,115][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:28:36,359][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6619172f: startup date [Sat Feb 25 16:28:36 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:28:36,410][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:28:36,621][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:28:36,750][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:28:37,082][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50589-1488011316969-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:28:37,214][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:28:58,140][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4eb754b0: startup date [Sat Feb 25 16:28:58 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:28:58,187][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:28:58,398][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:28:58,523][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:28:58,867][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50601-1488011338750-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:28:59,006][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:29:17,539][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 16:29:17 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:29:17,578][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:29:17,781][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:29:17,891][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:29:18,223][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50609-1488011358109-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:29:18,344][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:34:33,387][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 16:34:33 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:34:33,426][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:34:33,633][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:34:33,750][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:34:34,106][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50700-1488011673981-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:34:34,240][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:35:03,516][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 16:35:03 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:35:03,555][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:35:03,755][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:35:03,864][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:35:04,197][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50712-1488011704075-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:35:04,316][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:35:44,906][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 16:35:44 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:35:44,949][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:35:45,171][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:35:45,293][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:35:45,629][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50737-1488011745515-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:35:45,758][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:36:48,393][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:36:48 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:36:48,436][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:36:48,623][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:36:48,752][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:36:49,085][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50760-1488011808971-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:36:49,214][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:42:45,725][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 16:42:45 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:42:45,768][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:42:45,979][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:42:46,088][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:42:46,417][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51060-1488012166303-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:42:46,541][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:43:09,024][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 16:43:09 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:43:09,063][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:43:09,255][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:43:09,380][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:43:09,736][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51068-1488012189607-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:43:09,865][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:44:59,991][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 16:44:59 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:45:00,038][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:45:00,245][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:45:00,366][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:45:00,710][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51105-1488012300597-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:45:00,856][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:58:07,771][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:58:07 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:58:07,819][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:58:08,027][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:58:08,142][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:58:08,487][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51829-1488013088374-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:58:08,611][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:59:31,183][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 16:59:31 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:59:31,224][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:59:31,435][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:59:31,554][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:59:31,894][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51857-1488013171772-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:59:32,020][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:59:39,408][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 16:59:39 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:59:39,447][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:59:39,643][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:59:39,763][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:59:40,092][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51861-1488013179976-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:59:40,217][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 16:59:58,031][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a9292cb: startup date [Sat Feb 25 16:59:58 CST 2017]; root of context hierarchy
+[INFO ][20170225 16:59:58,076][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 16:59:58,267][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 16:59:58,400][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 16:59:58,731][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51872-1488013198618-1:1,clientId=null,started=false}] }
+[INFO ][20170225 16:59:58,855][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 17:02:23,740][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 17:02:23 CST 2017]; root of context hierarchy
+[INFO ][20170225 17:02:23,779][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 17:02:23,983][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 17:02:24,123][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 17:02:24,499][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60536-1488013344385-1:1,clientId=null,started=false}] }
+[INFO ][20170225 17:02:24,648][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 17:04:20,776][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 17:04:20 CST 2017]; root of context hierarchy
+[INFO ][20170225 17:04:20,816][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 17:04:21,019][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 17:04:21,129][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 17:04:21,473][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60843-1488013461359-1:1,clientId=null,started=false}] }
+[INFO ][20170225 17:04:21,597][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:17:31,257][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 19:17:31 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:17:31,303][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:17:31,540][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:17:31,671][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:17:32,032][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51972-1488021451916-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:17:32,179][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:28:09,082][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 19:28:09 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:28:09,127][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:28:09,345][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:28:09,481][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:28:09,834][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-57689-1488022089717-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:28:09,978][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:28:18,216][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 19:28:18 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:28:18,258][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:28:18,484][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:28:18,616][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:28:18,977][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-57694-1488022098860-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:28:19,131][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:35:53,143][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@674df816: startup date [Sat Feb 25 19:35:53 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:35:53,182][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:35:53,386][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:35:53,499][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:35:53,838][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-60093-1488022553723-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:35:53,964][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:37:15,720][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 19:37:15 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:37:15,759][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:37:15,956][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:37:16,074][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:37:16,413][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-49660-1488022636293-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:37:16,538][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:41:30,437][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 19:41:30 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:41:30,481][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:41:30,719][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:41:30,851][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:41:31,211][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51259-1488022891096-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:41:31,357][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:44:13,584][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ce352d9: startup date [Sat Feb 25 19:44:13 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:44:13,631][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:44:13,849][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:44:13,972][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:44:14,317][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51371-1488023054202-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:44:14,453][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:44:40,809][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 19:44:40 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:44:40,850][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:44:41,070][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:44:41,199][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:44:41,542][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51383-1488023081426-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:44:41,678][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:46:11,319][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 19:46:11 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:46:11,361][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:46:11,571][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:46:11,687][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:46:12,029][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-51410-1488023171914-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:46:12,158][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:46:55,542][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7f8ec00: startup date [Sat Feb 25 19:46:55 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:46:55,584][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:46:55,792][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:46:55,923][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:46:56,262][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-63360-1488023216148-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:46:56,388][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:57:05,013][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a9292cb: startup date [Sat Feb 25 19:57:05 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:57:05,056][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:57:05,282][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:57:05,400][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:57:05,738][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50069-1488023825625-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:57:06,115][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:57:57,893][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10543360: startup date [Sat Feb 25 19:57:57 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:57:57,942][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:57:58,159][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:57:58,277][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:57:58,615][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50091-1488023878501-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:57:58,745][MQProducerTest:32] ===>System.exit
+[INFO ][20170225 19:58:01,989][AbstractApplicationContext:573] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4eb754b0: startup date [Sat Feb 25 19:58:01 CST 2017]; root of context hierarchy
+[INFO ][20170225 19:58:02,034][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170225 19:58:02,249][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20170225 19:58:02,388][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20170225 19:58:02,752][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:DESKTOP-A98DQ99-50096-1488023882637-1:1,clientId=null,started=false}] }
+[INFO ][20170225 19:58:02,901][MQProducerTest:32] ===>System.exit

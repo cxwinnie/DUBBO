@@ -4,6 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <property name="context-root" value="/activemq-consumer"/>
         <property name="java-output-path" value="/activemq-consumer/src/main/webapp/WEB-INF/classes"/>
     </wb-module>
